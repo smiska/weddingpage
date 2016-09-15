@@ -7,16 +7,16 @@ var express = require("express"),
 var app = express();
 
 // SET UP EXPRESS    
-app.set("view-engine", "ejs");
+//app.set("view-engine", "ejs");
 
 // DEFINE BASIC ROUTES
 
 app.get("/", function(req, res){
-    res.render("home");
+    res.render("home.ejs");
 });
 
 app.get("*", function(req, res){
-    res.render("404");
+    res.render("404.ejs");
 });
 
 // START UP SERVER
