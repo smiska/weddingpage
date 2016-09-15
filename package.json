@@ -1,0 +1,16 @@
+{
+  "name": "weddingpage",
+  "version": "1.0.0",
+  "description": "This is a pet-project about a wedding-site with node(express, mongoose, passport), gulp(minify, uglify, jshint), jasmine, knockout following RESTful API.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mihaly Saroy",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.0"
+  }
+}
