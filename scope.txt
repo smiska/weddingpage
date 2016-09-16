@@ -1,0 +1,28 @@
+node
+expresst
+passportjs + jwt authentikáció
+mongodb  
+mongoose
+kliens oldalon knockout.js-t használj  
+// a sima static tartalmi dolgokat nem kell piszkálnia a knockoutnak 
+gulp-pal vagy grunt-tal buildelj (minify, uglify, stb)  
+// szépen legyen szétválasztva a frontend és a backend
+// minél inkább törekedj a RESTful API-ra
+git  
+aws
+unit teszteket - jasmine.js
+jshint, jscs és jasmine
+
+smiska [6:16 PM]  
+reményeim szerint a jövő héten már tudok mit mutatni
+
+faker npm
+prototype, class constructor
+
+---------------------------------
+SAJÁT ÜGYEK, UTÁNAOLVASÁSOK
+---------------------------------
+progressive web applications
+css layout
+bootstrap
+TSL, egyéb advanced az express oldalon
