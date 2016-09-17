@@ -2,14 +2,18 @@
 
 // include gulp plugins
 var 
-    gulp = require("gulp"),
-    newer = require("gulp-newer"),
-    imagemin = require("gulp-imagemin");
+    gulp        = require("gulp"),
+    newer       = require("gulp-newer"),
+    imagemin    = require("gulp-imagemin"),
+    del         = require("del"),
+    pkg         = require("./package.json");
    
 
 // file locations 
 
 var
+    devBuild = ((process.env.NODE_ENV || "development").trim().toLowerCase() !== "production"),
+
     source = "source/",
     destination = "build/",
     
@@ -17,6 +21,16 @@ var
         in: source + "images/*.*",
         out: destination + "images"
     };
+    
+// show build type
+console.log(pkg.name + " " + pkg.version + ", " + (devBuild ? "development" : "production") + " build");
+    
+// clean build folder
+gulp.task("clean", function() {
+    del([
+        destination + "*"
+    ]);
+});
     
 // copy and minify source images
 
@@ -30,6 +44,7 @@ gulp.task("images", function() {
 
 // gulp default task
 
-gulp.task("default", function(){
-
+gulp.task("default", ["images"], function(){
+    // changes in images-in folder
+    gulp.watch(images.in, ["images"]);
 });
